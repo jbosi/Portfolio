@@ -60,7 +60,7 @@ export default function Layout() {
         >
           <Tab label="Home" />
           <Tab label="Web" />
-          <Tab label="Design" />
+          {/* <Tab label="Design" /> */}
           <Tab label="Plus d\'infos" />
         </Tabs>
         <main>

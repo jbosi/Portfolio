@@ -31,34 +31,54 @@ const useStyles = makeStyles(theme => ({
       'box-shadow': '0 8px 16px 0 rgba(200,200,200,0.5)',
     }
   },
+  link: {
+    'margin-top': '70px',
+  }
 }));
-
 
 export default function Projects({tabValue}) {
   const classes = useStyles();
+  const setDisplayedTab = (tabValue) => {
+    switch (tabValue) {
+      case 0:
+          return (
+            <Link href="https://cranky-mirzakhani-fb86d6.netlify.com/" className={classes.link}>
+              <img
+                className={classes.backgroundImage}
+                src={RcubedImage}
+                alt='background'
+              />
+            </Link>
+          );
+      case 1:
+        return (
+          <Link href="https://brave-bardeen-feb3a7.netlify.com/" className={classes.link}>
+            <img
+              className={classes.backgroundImage}
+              src={VoteImage}
+              alt='background'
+            />
+          </Link>
+        );
+      case 2:
+        return (
+          <div className={classes.link}>
+            <img
+              className={classes.backgroundImage}
+              src={CVImage}
+              alt='background'
+            />
+          </div>
+        );
+      default:
+        break;
+    }
+  }
   
     return (
       <Grid container>
         <Grid container spacing={4}>
-          <img
-            className={classes.backgroundImage}
-            src={CVImage}
-            alt='background'
-          />
-        <Link href="https://cranky-mirzakhani-fb86d6.netlify.com/" variant="body2" className={classes.link}>
-          <img
-            className={classes.backgroundImage}
-            src={RcubedImage}
-            alt='background'
-          />
-        </Link>
-        <Link href="#" variant="body2" className={classes.link}>
-          <img
-            className={classes.backgroundImage}
-            src={VoteImage}
-            alt='background'
-          />
-        </Link>
+          {setDisplayedTab(tabValue)}
         </Grid>
       </Grid>
     )
