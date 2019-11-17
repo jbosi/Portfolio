@@ -1,6 +1,5 @@
-import React, { Fragment, useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import CVImage from '../images/CV.png';
 import RcubedImage from '../images/rcubed.png';
 import VoteImage from '../images/Vote.png';
@@ -35,7 +34,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-export default function Projects() {
+export default function Projects({tabValue}) {
   const classes = useStyles();
   
     return (
