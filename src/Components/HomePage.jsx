@@ -12,9 +12,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Projects from './Projects';
-// import theme from './../theme'
-
-let theme = createMuiTheme();
+import theme from './../theme'
 
 const useStyles = makeStyles(theme => ({
   iconsContainer: {
@@ -54,14 +52,14 @@ export default function Layout() {
       <Tabs
           value={tabValue}
           onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
+          indicatorColor={theme.primary}
+          textColor={theme.primary}
           centered
         >
           <Tab label="Home" />
           <Tab label="Web" />
           {/* <Tab label="Design" /> */}
-          <Tab label="Plus d\'infos" />
+          <Tab label="Plus d'infos" />
         </Tabs>
         <main>
           <Grid container>
