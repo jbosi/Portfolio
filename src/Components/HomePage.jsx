@@ -48,18 +48,18 @@ export default function Layout() {
    return (
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
-      <Container spacing={4} maxWidth='xl' className={classes.landingPadding}>
-      <Tabs
-          value={tabValue}
-          onChange={handleChange}
-          indicatorColor={theme.primary}
-          textColor={theme.primary}
-          centered
-        >
-          <Tab label="Home" />
-          <Tab label="Web" />
-          {/* <Tab label="Design" /> */}
-          <Tab label="Plus d'infos" />
+      <Container spacing={4} maxWidth='xl'>
+        <Tabs
+            value={tabValue}
+            onChange={handleChange}
+            indicatorColor={theme.primary}
+            textColor={theme.primary}
+            centered
+          >
+            <Tab label="Rcubed" />
+            <Tab label="Elir" />
+            {/* <Tab label="Design" /> */}
+            <Tab label="CV" />
         </Tabs>
         <main>
           <Grid container>
